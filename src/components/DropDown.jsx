@@ -4,7 +4,11 @@ const DropDown = props => {
   return (
     <select>
       {props.options.map(passedOption => {
-        return <option value={passedOption}>{passedOption}</option>;
+        return (
+          <option value={passedOption} key={passedOption}>
+            {passedOption}
+          </option>
+        );
       })}
     </select>
   );
