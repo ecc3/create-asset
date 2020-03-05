@@ -41,9 +41,12 @@ class App extends Component {
             <Tab value="advanced" label="2. Advanced"></Tab>
           </Tabs>
           <Router>
-            <AssetInformation path="/" saveUserInput={this.saveUserInput} />
+            <AssetInformation
+              path="create-asset/"
+              saveUserInput={this.saveUserInput}
+            />
             <Advanced
-              path="advanced"
+              path="create-asset/advanced"
               saveUserInput={this.saveUserInput}
               inputtedData={this.state}
             />
