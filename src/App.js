@@ -6,6 +6,26 @@ import Advanced from "./components/Advanced";
 import Header from "./components/Header";
 
 class App extends Component {
+  state = {
+    assetName: "",
+    assetCode: "",
+    maxIssuanceAmount: "",
+    type: "",
+    transferable: false,
+    withdrawable: false,
+    assetIcon: "",
+    makeAdditionalIssuance: false,
+    assetSignerID: "",
+    initialAmount: "",
+    uploadTerms: ""
+  };
+
+  saveUserInput = (field, data) => {
+    this.setState({ [field]: data }, () => {
+      console.log(this.state, "state");
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -15,8 +35,8 @@ class App extends Component {
           <Link to="advanced">2. Advanced</Link>
         </nav>
         <Router>
-          <AssetInformation path="/" />
-          <Advanced path="advanced" />
+          <AssetInformation path="/" saveUserInput={this.saveUserInput} />
+          <Advanced path="advanced" saveUserInput={this.saveUserInput} />
         </Router>
       </div>
     );
