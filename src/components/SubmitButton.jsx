@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "muicss/lib/react/button";
 
 const SubmitButton = props => {
   return (
     <div>
-      <input type="submit" value={props.text} />
+      <Button color="primary">{props.text}</Button>
     </div>
   );
 };
