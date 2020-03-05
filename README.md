@@ -4,7 +4,7 @@ A front end application that collects data from a user about setting up an asset
 
 ##Project Demo
 
-This project is hosted via GitHub pages and can be viewed [here](https://ecc3.github.io/create-asset/).
+This project is hosted via GitHub pages and can be viewed [here](https://ecc-create-asset.netlify.com/).
 
 ##Getting Started
 
