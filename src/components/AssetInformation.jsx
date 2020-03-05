@@ -3,17 +3,47 @@ import InputText from "./InputText";
 import AddFile from "./AddFile";
 import Checkbox from "./Checkbox";
 import DropDown from "./DropDown";
+import SubmitButton from "./SubmitButton";
 
-const AssetInformation = () => {
+const AssetInformation = props => {
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
   return (
-    <form>
-      <InputText defaultValue="Asset name" />
-      <InputText defaultValue="Asset code" />
-      <InputText defaultValue="Max issuance amount" />
-      <DropDown options={["Type 1", "Type 2", "Type 3"]} />
-      <Checkbox checkName="Transferable" />
-      <Checkbox checkName="Withdrawable" />
-      <AddFile label="Asset icon" />
+    <form onSubmit={handleSubmit}>
+      <InputText
+        defaultValue="Asset name"
+        name="assetName"
+        saveUserInput={props.saveUserInput}
+      />
+      <InputText
+        defaultValue="Asset code"
+        name="assetCode"
+        saveUserInput={props.saveUserInput}
+      />
+      <InputText
+        defaultValue="Max issuance amount"
+        name="maxIssuanceAmount"
+        saveUserInput={props.saveUserInput}
+      />
+      <DropDown
+        options={["Type 1", "Type 2", "Type 3"]}
+        name="type"
+        defaultValue="Type"
+        saveUserInput={props.saveUserInput}
+      />
+      <Checkbox
+        checkName="Transferable"
+        name="transferable"
+        saveUserInput={props.saveUserInput}
+      />
+      <Checkbox
+        checkName="Withdrawable"
+        name="withdrawable"
+        saveUserInput={props.saveUserInput}
+      />
+      <AddFile label="Asset icon" saveUserInput={props.saveUserInput} />
+      <SubmitButton text="Next" saveUserInput={props.saveUserInput} />
     </form>
   );
 };
