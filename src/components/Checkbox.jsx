@@ -1,5 +1,4 @@
 import React from "react";
-// import Checkbox from "muicss/lib/react/checkbox";
 
 const Checkbox = props => {
   const handleBlur = event => {
