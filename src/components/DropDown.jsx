@@ -2,11 +2,10 @@ import React from "react";
 
 const DropDown = props => {
   const handleBlur = event => {
-    console.log(event.target.checked);
-    props.saveUserInput(props.name, event.target.checked);
+    props.saveUserInput(props.name, event.target.value);
   };
   return (
-    <select>
+    <select onBlur={handleBlur}>
       <option selected disabled hidden>
         {props.defaultValue}
       </option>
