@@ -1,17 +1,19 @@
 import React from "react";
-// import { Link } from "@reach/router";
+import { navigate } from "@reach/router";
 import InputText from "./InputText";
 import AddFile from "./AddFile";
 import Checkbox from "./Checkbox";
 import DropDown from "./DropDown";
 import SubmitButton from "./SubmitButton";
+import Form from "muicss/lib/react/form";
 
 const AssetInformation = props => {
   const handleSubmit = event => {
     event.preventDefault();
+    navigate("advanced");
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <InputText
         defaultValue="Asset name"
         name="assetName"
@@ -48,12 +50,8 @@ const AssetInformation = props => {
         smallText="JPEG or PNG, no less than 120x120 px"
         saveUserInput={props.saveUserInput}
       />
-      {/*make button move onto next page*/}
-      {/* <div>
-        <Link to="advanced">Next</Link>
-      </div> */}
       <SubmitButton text="Next" />
-    </form>
+    </Form>
   );
 };
 
