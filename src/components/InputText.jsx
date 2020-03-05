@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "muicss/lib/react/input";
 
 const InputText = props => {
   const handleBlur = event => {
@@ -6,12 +7,12 @@ const InputText = props => {
   };
   return (
     <div>
-      <input
+      <Input
         type="text"
         defaultValue={props.defaultValue}
         onBlur={handleBlur}
         required
-      ></input>
+      ></Input>
     </div>
   );
 };
