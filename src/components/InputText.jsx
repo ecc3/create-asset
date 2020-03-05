@@ -1,18 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class InputText extends Component {
-  handleBlur = event => {};
-
-  render() {
-    return (
-      <input
-        type="text"
-        value={this.props.defaultValue}
-        onBlur={this.handleBlur}
-        required
-      ></input>
-    );
-  }
-}
+const InputText = props => {
+  const handleBlur = event => {
+    props.saveUserInput(props.name, event.target.value);
+  };
+  return (
+    <input
+      type="text"
+      defaultValue={props.defaultValue}
+      onBlur={handleBlur}
+      required
+    ></input>
+  );
+};
 
 export default InputText;
