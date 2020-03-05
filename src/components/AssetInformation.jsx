@@ -10,7 +10,7 @@ import Form from "muicss/lib/react/form";
 const AssetInformation = props => {
   const handleSubmit = event => {
     event.preventDefault();
-    navigate("advanced");
+    props.navigateToNextTab();
   };
   return (
     <Form onSubmit={handleSubmit}>
