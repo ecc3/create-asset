@@ -14,6 +14,7 @@ const AddFile = props => {
       <p>{props.label}</p>
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} />
+        <i class="fas fa-upload"></i>
         <h4>Drag a file here or click to browse</h4>
         <p>{props.smallText}</p>
       </div>
