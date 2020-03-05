@@ -35,18 +35,20 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Tabs onChange={this.onChange} defaultSelectedIndex={1}>
-          <Tab value="/" label="1. Asset Information"></Tab>
-          <Tab value="advanced" label="2. Advanced"></Tab>
-        </Tabs>
-        <Router>
-          <AssetInformation path="/" saveUserInput={this.saveUserInput} />
-          <Advanced
-            path="advanced"
-            saveUserInput={this.saveUserInput}
-            inputtedData={this.state}
-          />
-        </Router>
+        <div className="content">
+          <Tabs onChange={this.onChange} defaultSelectedIndex={1}>
+            <Tab value="/" label="1. Asset Information"></Tab>
+            <Tab value="advanced" label="2. Advanced"></Tab>
+          </Tabs>
+          <Router>
+            <AssetInformation path="/" saveUserInput={this.saveUserInput} />
+            <Advanced
+              path="advanced"
+              saveUserInput={this.saveUserInput}
+              inputtedData={this.state}
+            />
+          </Router>
+        </div>
       </div>
     );
   }
