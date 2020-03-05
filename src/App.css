@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  max-width: 500px;
+}
+
+.content {
+  padding: 15px;
 }
 
 .container {
@@ -22,4 +27,11 @@
   color: #bdbdbd;
   outline: none;
   transition: border 0.24s ease-in-out;
+}
+
+.field {
+  font-size: 16px;
+  height: 32px;
+  text-align: left;
+  padding-top: 15px;
 }
