@@ -5,12 +5,14 @@ const InputText = props => {
     props.saveUserInput(props.name, event.target.value);
   };
   return (
-    <input
-      type="text"
-      defaultValue={props.defaultValue}
-      onBlur={handleBlur}
-      required
-    ></input>
+    <div>
+      <input
+        type="text"
+        defaultValue={props.defaultValue}
+        onBlur={handleBlur}
+        required
+      ></input>
+    </div>
   );
 };
 
