@@ -8,6 +8,8 @@ import Link from "./Link";
 const Advanced = props => {
   const handleSubmit = event => {
     event.preventDefault();
+    const finalData = JSON.stringify(props.inputtedData);
+    console.log(finalData);
   };
 
   return (

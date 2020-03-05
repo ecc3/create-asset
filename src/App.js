@@ -36,7 +36,11 @@ class App extends Component {
         </nav>
         <Router>
           <AssetInformation path="/" saveUserInput={this.saveUserInput} />
-          <Advanced path="advanced" saveUserInput={this.saveUserInput} />
+          <Advanced
+            path="advanced"
+            saveUserInput={this.saveUserInput}
+            inputtedData={this.state}
+          />
         </Router>
       </div>
     );
