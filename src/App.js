@@ -37,8 +37,8 @@ class App extends Component {
         <Header />
         <div className="content">
           <Tabs onChange={this.onChange} defaultSelectedIndex={1}>
-            <Tab value="/" label="1. Asset Information"></Tab>
-            <Tab value="advanced" label="2. Advanced"></Tab>
+            <Tab value="create-asset/" label="1. Asset Information"></Tab>
+            <Tab value="create-asset/advanced" label="2. Advanced"></Tab>
           </Tabs>
           <Router>
             <AssetInformation
