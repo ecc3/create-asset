@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from "@reach/router";
 import InputText from "./InputText";
 import AddFile from "./AddFile";
 import Checkbox from "./Checkbox";
@@ -42,8 +43,16 @@ const AssetInformation = props => {
         name="withdrawable"
         saveUserInput={props.saveUserInput}
       />
-      <AddFile label="Asset icon" saveUserInput={props.saveUserInput} />
-      <SubmitButton text="Next" saveUserInput={props.saveUserInput} />
+      <AddFile
+        label="Asset icon"
+        smallText="JPEG or PNG, no less than 120x120 px"
+        saveUserInput={props.saveUserInput}
+      />
+      {/*make button move onto next page*/}
+      {/* <div>
+        <Link to="advanced">Next</Link>
+      </div> */}
+      <SubmitButton text="Next" />
     </form>
   );
 };

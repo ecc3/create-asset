@@ -33,7 +33,11 @@ const Advanced = props => {
         name="initialAmount"
         saveUserInput={props.saveUserInput}
       />
-      <AddFile label="Upload terms" />
+      <AddFile
+        label="Upload terms"
+        smallText="JPEG, PNG, PDF, max 5 mb"
+        saveUserInput={props.saveUserInput}
+      />
       <SubmitButton text="Create request" />
     </form>
   );
