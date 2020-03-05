@@ -1,22 +1,18 @@
 import React from "react";
+import Option from "muicss/lib/react/option";
+import Select from "muicss/lib/react/select";
 
 const DropDown = props => {
   const handleBlur = event => {
     props.saveUserInput(props.name, event.target.value);
   };
   return (
-    <select onBlur={handleBlur}>
-      <option selected disabled hidden>
-        {props.defaultValue}
-      </option>
+    <Select onBlur={handleBlur}>
+      <Option selected disabled hidden label={props.defaultValue}></Option>
       {props.options.map(passedOption => {
-        return (
-          <option value={passedOption} key={passedOption}>
-            {passedOption}
-          </option>
-        );
+        return <Option label={passedOption} key={passedOption}></Option>;
       })}
-    </select>
+    </Select>
   );
 };
 
